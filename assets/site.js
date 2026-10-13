@@ -200,7 +200,7 @@
   /* andamento da obra: barras preenchem ao entrar na tela */
   $$('.obra').forEach(o=>gsap.from($$('.ob-bar i',o),{scaleX:0,transformOrigin:'left',duration:1.2,ease:'power3.out',stagger:.12,scrollTrigger:{trigger:o,start:'top 85%'}}));
   /* cards de empreendimento entram em sequência */
-  $$('.pj-grid').forEach(g=>gsap.from($$('.pj-card',g),{y:60,opacity:0,stagger:.1,ease:'none',scrollTrigger:{trigger:g,start:'top 92%',end:'top 55%',scrub:.6}}));
+  $$('.pj-grid').forEach(g=>(matchMedia('(max-width:820px)').matches?$$('.pj-card',g).forEach(card=>gsap.from(card,{y:40,opacity:0,ease:'none',scrollTrigger:{trigger:card,start:'top 98%',end:'top 75%',scrub:.4}})):gsap.from($$('.pj-card',g),{y:60,opacity:0,stagger:.1,ease:'none',scrollTrigger:{trigger:g,start:'top 92%',end:'top 55%',scrub:.6}})));
 
   /* fotos com parallax dentro do recorte */
   $$('[data-par]').forEach(ph=>{
