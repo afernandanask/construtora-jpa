@@ -803,7 +803,8 @@ a.svc:hover .ph img{transform:scale(1.05)}
   .path .circ{width:36px;height:36px}
 }
 @media (min-width:821px){.hx-side{padding-top:.45rem;padding-bottom:.6rem}}
-@media (min-width:821px) and (max-width:1100px){.hx-top{grid-template-columns:minmax(0,1fr) minmax(0,19rem)}.hx h1{font-size:clamp(2.2rem,1rem + 3.6vw,3.4rem)}}
+@media (min-width:821px) and (max-width:1100px){.hx-top{grid-template-columns:minmax(0,1fr) minmax(0,19rem)}.hx h1{font-size:clamp(2rem,.4rem + 3.4vw,3.4rem)}}
+@media (min-width:821px){.hx h1{max-width:17ch}}
 @media (min-width:1101px){.hx h1{font-size:clamp(2.6rem,.9rem + 4.6vw,4.6rem)}}
 @media (min-width:821px) and (max-width:1100px){.hx-side p{display:none}}
 @media (min-width:821px) and (max-width:1100px){.hx-side{padding-bottom:0;justify-content:flex-end}.hx-top{align-items:end}}
