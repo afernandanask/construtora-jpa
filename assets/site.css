@@ -868,4 +868,5 @@ ol.collage{margin-bottom:0}
   .sec:has(+ .cta){padding-bottom:44px!important}
   .cta + .sec{padding-top:44px!important}
   main > .sec:last-child{padding-bottom:60px!important}
+  .legal{padding-bottom:60px}
 }
