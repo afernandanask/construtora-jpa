@@ -872,3 +872,21 @@ ol.collage{margin-bottom:0}
   main > .sec:last-child{padding-bottom:60px!important}
   .legal{padding-bottom:60px}
 }
+
+/* mega menus: coluna da direita termina na mesma linha do último card */
+.mm-right{display:flex;flex-direction:column;gap:12px}
+.mm-right .mm-head{margin-bottom:2px}
+.mm-side .mm-links{gap:0}
+.mm-links a{padding:7px 44px 7px 12px;position:relative}
+.mm-links b,.mm-links small{line-height:1.35}
+.mm-cta{margin-top:auto;padding:14px 14px 14px 20px}
+.mm-cta p{line-height:1.25}
+
+/* seta ao passar o mouse em cada item */
+:root{--mm-arrow:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 17L17 7M8 7h9v9'/%3E%3C/svg%3E")}
+.mm-card::after,.mm-links a::after{content:"";width:16px;height:16px;flex:none;background:currentColor;-webkit-mask:var(--mm-arrow) center/contain no-repeat;mask:var(--mm-arrow) center/contain no-repeat;opacity:0;transition:opacity .25s ease,transform .35s cubic-bezier(.2,.7,.2,1),width .35s cubic-bezier(.2,.7,.2,1),margin .35s cubic-bezier(.2,.7,.2,1)}
+.mm-card::after{width:0;margin-left:-14px;transform:translate(-6px,6px)}
+.mm-card:hover::after,.mm-card:focus-visible::after{width:16px;margin-left:0;opacity:1;transform:none}
+.mm-links a::after{position:absolute;right:16px;top:50%;margin-top:-8px;transform:translate(-6px,6px)}
+.mm-links a:hover::after,.mm-links a:focus-visible::after{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.mm-card::after,.mm-links a::after{transition:opacity .2s}}
